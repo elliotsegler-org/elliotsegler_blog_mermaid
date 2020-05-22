@@ -74,7 +74,7 @@ class MermaidExtension(Extension):
         """ Add HilitePostprocessor to Markdown instance. """
         # Insert a preprocessor before ReferencePreprocessor
         mermaid = MermaidPreprocessor(md)
-        print(self.getConfigInfo())
+
         mermaid.config = self.getConfigs()
         md.preprocessors.register(mermaid, 'mermaid', 35)
         md.registerExtension(self)
